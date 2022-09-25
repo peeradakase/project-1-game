@@ -1,0 +1,56 @@
+// start
+// 1. Create 20 divs (in HTML)
+  // in order to create 20 divs we need:
+  // give them ids for matching in the future
+  // prep for ids
+  // ids which we want are 10 pairs (20 pieces)
+  // we have to give 20 divs the ids. so that using Arr is a good idea.
+
+// 2. create arr of 20 pieces of id (10 pairs of id)
+  // ig.                     ['a','a','b','b','c','c',.....]
+  // 2.1 Shuffle (สลับลำดับ คล้ายๆ สลับไพ่ shuffle the cards) arrays of ids
+  // => to become like this  ['b','c','a','a','c','b',.....]
+
+  // 2.2 put ids and pics into each <div>s (using for loop)
+  // remember that we use ids for matching pics.
+  // so we have to put both ids and pics into each <div>s หรือเเต่ละbox ..it's gonna be like this
+  // <div id="a"> <img class="display-none" src="./image/a.jpeg" /> </div>
+  // the picture name have to be the same as the id name in order to show accurately
+  // if id looks like this id="a"   ,so is  ./image/a.jpeg
+  // we have " class="display-none" " to hide pics before click
+
+  //2.3 define new variable(let count) to collect that user already have 2 clicks
+  //initial vaule of this variable is equivalant to zero = 0
+
+// 3. when user click first pic
+  // 3.1 show pic which is in that box
+  // we have to remove class="display-none"
+
+  // 3.2 program have to record which pic is clicked
+    // we have to define new variable (JS) to collect id that is clicked
+
+  // 3.3 then let count += 1;
+
+*** if let count = 2;, do this coming step
+// 5. to know the matching pics
+  //compare both ids to one another
+  //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//click first div
+// show  picture of first div
+
+//การจะเปลี่ยนกล่องเป็นรูปภาพ เราต้องรู้ก่อนว่า กล่องไหนถูกคลิก เลยย้อยกลับไปที่stepcreate 20 divs
