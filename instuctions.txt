@@ -4,13 +4,7 @@
   // give them ids for matching in the future
   // prep for ids
   // ids which we want are 10 pairs (20 pieces)
-  // we have to give 20 divs the ids. so that using Arr is a good idea.
-
-
-// 2. create arr of 20 pieces of id (10 pairs of id)
-  // ig.                     ['a','a','b','b','c','c',.....]
-  // 2.1 Shuffle (สลับลำดับ คล้ายๆ สลับไพ่ shuffle the cards) arrays of ids
-  // => to become like this  ['b','c','a','a','c','b',.....]
+  // we have to give 20 divs the ids.
 
   // 2.2 put ids and pics into each <div>s (using for loop)
   // remember that we use ids for matching pics.
@@ -20,8 +14,11 @@
   // if id looks like this id="a"   ,so is  ./image/a.jpeg
   // we have " class="display-none" " to hide pics before click
 
-  //2.3 define new variable(let count) to collect that user already have 2 clicks
+
+//2. define new variable(let count) to collect that user already have 2 clicks
   //initial vaule of this variable is equivalant to zero = 0
+
+
 
 
 
