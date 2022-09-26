@@ -1,27 +1,53 @@
-BODY {
-  background-color: #c3ede5;
+body {
+  background-color: #A8ECE7;
+  color: 1d1d1d;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 23PX;
+  margin-top: 25px;
 }
 
 .container {
-  width: 95%;
-  overflow: hidden;
-  background-color: #ddadf1;
-  margin: 20px auto;
-  padding: 20px 0;
+  display: flex;
+  width: 590px;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
-.container ul {
-  padding: 0;
-  margin: 0;
+.card {
+  background-color: #FDFF8F;
+  width: 100px;
+  height: 100px;
+  margin: 7px;
+  border-radius: 15%;
 }
 
-.container ul li {
-  list-style: none;
-  float: left;
-  width: 10%;
-  height: 90px;
-  background: #ecd7a6;
-  margin: 40px 40px 0px 40px;
+#block-for-reset-and-click {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
 }
 
-.
+.show-click {
+  font-size: 50px;
+  margin-right: 100px;
+  padding: 0px 20px;
+  border-radius: 10%;
+}
+
+.reset-button {
+  background-color: #F4BEEE;
+  border: none;
+  padding:  10px 50px;
+  border-radius: 10%;
+  font-size: 30px;
+}
+
+
+.reset-button:hover {
+
+}
