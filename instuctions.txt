@@ -6,6 +6,7 @@
   // ids which we want are 10 pairs (20 pieces)
   // we have to give 20 divs the ids. so that using Arr is a good idea.
 
+
 // 2. create arr of 20 pieces of id (10 pairs of id)
   // ig.                     ['a','a','b','b','c','c',.....]
   // 2.1 Shuffle (สลับลำดับ คล้ายๆ สลับไพ่ shuffle the cards) arrays of ids
@@ -22,9 +23,10 @@
   //2.3 define new variable(let count) to collect that user already have 2 clicks
   //initial vaule of this variable is equivalant to zero = 0
 
+
+
 // 3. when user click first pic
-  // 3.1 show pic which is in that box
-  // we have to remove class="display-none"
+  // 3.1 show pic which is in \\\splay-none"
 
   // 3.2 program have to record which pic is clicked
     // we have to define new variable (JS) to collect id that is clicked
@@ -46,7 +48,7 @@
 
 
 
-sxsxs
+
 
 
 
