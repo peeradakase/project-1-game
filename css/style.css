@@ -1,6 +1,6 @@
 body {
-  background-color: #A8ECE7;
-  color: 1d1d1d;
+  background-image: url("../img/bg.jpeg");
+  color: #f7f8fb;
 }
 
 h1 {
@@ -12,7 +12,7 @@ h1 {
 
 .container {
   display: flex;
-  width: 590px;
+  width: 650px;
   flex-wrap: wrap;
   margin: 0 auto;
 }
@@ -22,7 +22,10 @@ h1 {
   width: 100px;
   height: 100px;
   margin: 7px;
+  margin-left: 20px;
   border-radius: 15%;
+  overflow: hidden;
+
 }
 
 #block-for-reset-and-click {
@@ -45,9 +48,18 @@ h1 {
   padding:  10px 50px;
   border-radius: 10%;
   font-size: 30px;
+  cursor: pointer;
 }
 
+img {
+  max-width: 100%;
+}
 
-.reset-button:hover {
+.card img {
+  height: 100%;
+  width: 100%;
+}
 
+.card {
+  cursor: pointer;
 }
