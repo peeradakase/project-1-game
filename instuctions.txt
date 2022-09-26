@@ -13,20 +13,23 @@
   // the picture name have to be the same as the id name in order to show accurately
   // if id looks like this id="a"   ,so is  ./image/a.jpeg
   // we have " class="display-none" " to hide pics before click
+-------------------------------------------------------------
+
+//2.3 สลับที่กล่อง
+to shuffle all the boxes
 
 
-//2. define new variable(let count) to collect that user already have 2 clicks
+//2.4 define new variable(let count) to collect that user already have 2 clicks
   //initial vaule of this variable is equivalant to zero = 0
 
 
+// 3. when user click first box
+  // 3.1 show pic inside box ( -> take the class that has "display: none" out)
 
-
-
-// 3. when user click first pic
-  // 3.1 show pic which is in \\\splay-none"
-
-  // 3.2 program have to record which pic is clicked
-    // we have to define new variable (JS) to collect id that is clicked
+  // 3.2 program have to record which box is clicked
+    // we have to define new variable (JS) to collect id from the box that is clicked
+    // ิbut in html we can't use the same id (*** id has to be unique) so, we change to plan!
+    // use Atribute named "code" instead
 
   // 3.3 then let count += 1;
 
