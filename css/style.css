@@ -58,8 +58,13 @@ img {
 .card img {
   height: 100%;
   width: 100%;
+
 }
 
 .card {
   cursor: pointer;
+}
+
+.display-none {
+  display: none;
 }
