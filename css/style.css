@@ -1,20 +1,27 @@
-#container {
-  width: 100%;
-  height: 100%;
-  background-color: #ddadf1;
-  opacity: 50%;
-}
-.box-for-cards {
-  width: 80%;
-  height: 500px;
-  background-color: #d290b3;
-  opacity: 70%;
-  border-radius: 3em;
-  margin: 20px 5px 30px 140px;
+BODY {
+  background-color: #c3ede5;
 }
 
-.design-for-cards {
-  width: 40px;
-  height: ;
-  background-color: #ecd7a6;
+.container {
+  width: 95%;
+  overflow: hidden;
+  background-color: #ddadf1;
+  margin: 20px auto;
+  padding: 20px 0;
 }
+
+.container ul {
+  padding: 0;
+  margin: 0;
+}
+
+.container ul li {
+  list-style: none;
+  float: left;
+  width: 10%;
+  height: 90px;
+  background: #ecd7a6;
+  margin: 40px 40px 0px 40px;
+}
+
+.
