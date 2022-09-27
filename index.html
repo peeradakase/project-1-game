@@ -8,87 +8,23 @@
 
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script/main.js" defer></script>
   </head>
 
   <body>
     <div class="box-for-cards">
       <h1 class="text-center">Picture matching game</h1>
-      <div class="container">
-        <!--Harry -->
-        <div code="a" class="card">
-          <img class="display-none" src="./img/harry1.jpeg" />
-        </div>
-        <div code="a" class="card">
-          <img class="display-none" src="./img/harry2.jpeg" />
-        </div>
-        <!--Dumbledore -->
-        <div code="b" class="card">
-          <img class="display-none" src="./img/Dumbledore1.jpeg" />
-        </div>
-        <div code="b" class="card">
-          <img class="display-none" src="./img/Dumbledore2.jpeg" />
-        </div>
-        <!-- Emma1 -->
-        <div code="c" class="card">
-          <img class="display-none" src="./img/Emma1.jpeg" />
-        </div>
-        <div code="c" class="card">
-          <img class="display-none" src="./img/Emma2.jpeg" />
-        </div>
-        <!--Malfoy -->
-        <div code="d" class="card">
-          <img class="display-none" src="./img/malfoy1.jpeg" />
-        </div>
-        <div code="d" class="card">
-          <img class="display-none" src="./img/malfoy2.webp" />
-        </div>
-        <!--Ron -->
-        <div code="e" class="card">
-          <img class="display-none" src="./img/Ron1.jpeg" />
-        </div>
-        <div code="e" class="card">
-          <img class="display-none" src="./img/Ron2.jpeg" />
-        </div>
-        <!--Voldemort1 -->
-        <div code="f" class="card">
-          <img class="display-none" src="./img/Voldemort1.jpeg" />
-        </div>
-        <div code="f" class="card">
-          <img class="display-none" src="./img/Voldemort2.jpeg" />
-        </div>
-        <!--One eye -->
-        <div code="g" class="card">
-          <img class="display-none" src="./img/oneeye1.jpeg" />
-        </div>
-        <div code="g" class="card">
-          <img class="display-none" src="./img/oneeye2.jpeg" />
-        </div>
-        <!--Snape -->
-        <div code="h" class="card">
-          <img class="display-none" src="./img/snape1.jpeg" />
-        </div>
-        <div code="h" class="card">
-          <img class="display-none" src="./img/snape2.webp" />
-        </div>
-        <!--Teacher1 -->
-        <div code="i" class="card">
-          <img class="display-none" src="./img/teacher1.jpeg" />
-        </div>
-        <div code="i" class="card">
-          <img class="display-none" src="./img/teacher2.jpeg" />
-        </div>
-        <!--Hagrid -->
-        <div code="j" class="card">
-          <img class="display-none" src="./img/Hagrid1.webp" />
-        </div>
-        <div code="j" class="card">
-          <img class="display-none" src="./img/Hagrid2.jpeg" />
-        </div>
-      </div>
+      <div id="grid" class="container">1</div>
 
       <div id="block-for-reset-and-click">
-        <div class="show-click"><span>0</span> Click</div>
-        <button class="reset-button">Reset</button>
+        <div class="show-click"><span id="clicks">0</span> Click</div>
+        <button id="reset" class="reset-button">Reset</button>
       </div>
     </div>
   </body>
