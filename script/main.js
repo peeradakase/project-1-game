@@ -86,6 +86,8 @@ const data = [
 ];
 
 let count = 0;
+let clickedFirstBox = null;
+let clickedSecondBox = null;
 
 const generateCards = () => {
   $grid.empty();
@@ -98,28 +100,39 @@ const generateCards = () => {
     `);
   });
 };
-let clickedFirstBox = null;
-let clickedSecondBox =null;
 
-const handleClick = function() {
+
+const handleClick = function () {
   // get the item we clicked on (e.currentTarget)
   // given the item, select the img and .show()
   // add 1 to count
-  $(this).find("img").show("400");
+  $(this).find("img").show();
   count += 1;
   if (count === 1) {
     clickedFirstBox = $(this).attr("data-code");
-  console.log("C1:",clickedFirstBox)
   }
   //the issue is that when we have first click we collect it in variable, then having second click and collect it to, so the first click was changed to be the second click. because of this we will create another variable to collect the second click
   if (count === 2) {
-      clickedSecondBox =  $(this).attr("data-code");
-        console.log("C2:",clickedSecondBox)
+    clickedSecondBox = $(this).attr("data-code");
+
+    //to check that both cards are not similar
+    if (clickedFirstBox !== clickedSecondBox) {
+      //to hide image, not box!
+      $(".card").find("img").delay(1000).fadeOut(400)
+      //reset คลิกทั้งสองครั้ง
+
+    } else {
+      // to remove the both cards which are similar
+      //($('[name="deleteuserid"]')
+      $(`[data-code=${clickedFirstBox}]`).delay(1000).css("visibility", "hidden")
+    }
+    //to reset after taking the similar cards
+    count = 0;
+    clickedFirstBox = null;
+    clickedSecondBox = null;
+
 
   }
-
-
-
 
   //var name = $("#id").attr("name");
 
