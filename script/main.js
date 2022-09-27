@@ -98,15 +98,33 @@ const generateCards = () => {
     `);
   });
 };
+let clickedFirstBox = null;
+let clickedSecondBox =null;
 
 const handleClick = function() {
   // get the item we clicked on (e.currentTarget)
   // given the item, select the img and .show()
   // add 1 to count
+  $(this).find("img").show("400");
+  count += 1;
+  if (count === 1) {
+    clickedFirstBox = $(this).attr("data-code");
+  console.log("C1:",clickedFirstBox)
+  }
+  //the issue is that when we have first click we collect it in variable, then having second click and collect it to, so the first click was changed to be the second click. because of this we will create another variable to collect the second click
+  if (count === 2) {
+      clickedSecondBox =  $(this).attr("data-code");
+        console.log("C2:",clickedSecondBox)
 
-  let clickedBox = $(this)
-  console.log(clickedBox)
-  .$(this).find("img").show()
+  }
+
+
+
+
+  //var name = $("#id").attr("name");
+
+  //compare both pics(code) to one another
+
 }
 
 const init = () => {
