@@ -49,17 +49,36 @@ to do that we have to..
 
 
 
-
-
-
-
-
-
-
-
-
-
 //click first div
 // show  picture of first div
 
 //การจะเปลี่ยนกล่องเป็นรูปภาพ เราต้องรู้ก่อนว่า กล่องไหนถูกคลิก เลยย้อยกลับไปที่stepcreate 20 divs
+
+
+//reset button
+  //refresh whole page
+
+//click show
+  //define variable to collect click
+  //use jquery
+    //ทำในf เพราะจะเกิดผลก่ต่อเมื่อuser click
+    //
+
+
+    **************************
+
+//1 build a timer
+
+  //count every sec
+  //start timer when having first click
+  //stop timer when win or reset
+  //it is suppust to look like this
+  //00:00
+  //00:01
+  //....
+
+
+  //กลับไปดูคลิปน้องเรื่องโปรเจค stop watch
+
+//2 create the slide
+//3 เเพลนเรื่องคอมเม้นเพื่อน
