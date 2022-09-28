@@ -212,19 +212,15 @@ const handleClick = function () {
     if (clickedFirstBox !== clickedSecondBox) {
       //to hide image, not box!
       lock = true;
-      const startTime = new Date()
       $(".card").find("img").delay(1000).fadeOut(400)
       setTimeout(() => {
         lock = false;
       }, 1420);
     } else {
-      console.log(clickedFirstBox, ' :clickedFirstBox');
-      console.log($(`[data-code=${clickedFirstBox}]`), " $(`[data-code=${clickedFirstBox}]`)")
       // to remove the both cards which are similar
       //($('[name="deleteuserid"]')
       lock = true;
       $(`[data-code=${clickedFirstBox}]`).delay(700).queue(function (next) {
-        console.log($(this));
         $(this).css("visibility", "hidden");
         next();
       });
@@ -261,10 +257,6 @@ const handleClick = function () {
   }
   isFirstClick = false //this guy turn false since we already had first click!
 }
-
-
-
-
 
 //reset button
 //refresh whole page

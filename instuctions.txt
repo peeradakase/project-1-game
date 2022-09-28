@@ -67,18 +67,10 @@ to do that we have to..
 
     **************************
 
-//1 build a timer
-
-  //count every sec
-  //start timer when having first click
-  //stop timer when win or reset
-  //it is suppust to look like this
-  //00:00
-  //00:01
-  //....
 
 
-  //กลับไปดูคลิปน้องเรื่องโปรเจค stop watch
+
 
 //2 create the slide
+//ซ้อมพรีเซ้น
 //3 เเพลนเรื่องคอมเม้นเพื่อน
