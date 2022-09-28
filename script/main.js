@@ -113,6 +113,9 @@ let clickedSecondBox = null;
 let collectId = null;
 let lock = false;
 let start = new Date;
+let isFirstClick = true;
+let startSeconds = 0;
+
 
 //shuffle arr
 function shuffle(array) {
@@ -133,13 +136,38 @@ function shuffle(array) {
   return array;
 }
 
+//function for return timing
+function getTimeString(total_seconds) {
+  function pretty_time_string(num) {
+    return (num < 10 ? "0" : "") + num;
+  }
+  total_seconds = total_seconds % 3600;
+
+  var minutes = Math.floor(total_seconds / 60);
+  total_seconds = total_seconds % 60;
+
+  var seconds = Math.floor(total_seconds);
+
+  // Pad the minutes and seconds with leading zeros, if required
+
+  minutes = pretty_time_string(minutes);
+  seconds = pretty_time_string(seconds);
+
+  // Compose the string for display
+  var currentTimeString = minutes + ":" + seconds;
+
+  return currentTimeString;
+}
+
+
 //วนลูปกล่อง เพื่อใส่ในคอนเทนเนอ
 //เราใส่ไอดี เพื่อเชตว่า เค้าคลิกกล่องเดิมเปล่า
 const generateCards = () => {
   $grid.empty();
 
-  // const shuffled = shuffle([...data]); // copy data and then shuffle
-  data.forEach((image) => {
+  // copy original array into the new array ,then shuffle, after that return shuffled array to collect in new variable
+  const shuffled = shuffle([...data]);
+  shuffled.forEach((image) => {
     $grid.append(`
       <div id="${image.id}" class="card" data-code="${image.code}">
         <img src="${image.link}" style="display: none;" />
@@ -156,9 +184,10 @@ const generateCards = () => {
 
 const handleClick = function () {
   // Lock game for delay fade
+  //if program lock, function end
   if (lock) return false;
+
   // Ignore if id already selected
-  console.log($(this).attr("id"), collectId)
   if ($(this).attr("id") === collectId) return false;
   // Set collectId so that you cannot click on it again
   collectId = $(this).attr("id");
@@ -218,25 +247,19 @@ const handleClick = function () {
   clickCounter += 1;
   $("#clicks").text(clickCounter);
 
-  //มีกาดครบ20 อันที่เป็น "visibility", "hidden") แสดงว่าเกมจบ
-  // setTimeout(() => {
-  //   if ($('.card[style*="visibility: hidden"]').length === 20) {
-  //     alert("Winner!!");
-  //   }
-  // }, 900);
-  //console.log($('.card[style*="visibility: hidden"]').length)
+  //use "if" to give setInterval condition ,so it can work only once
+  //define variable
+  //condition: when get first click, do setInterval (we can't use existed variable coz their values always change. we want variable that value change only once after having first click)
+  //if second click, then function isn't executed
+  if (isFirstClick) {//this is truthy, so that we don't need === true
+    //
+    setInterval(function () {
+      startSeconds = startSeconds + 1;
+      $('#timer').text(getTimeString(startSeconds));
+    }, 1000);
 
-
-
-  setInterval(function () {
-    $('#timer').text((new Date - start) / 1000 + " Seconds");
-  }, 1000);
-
-  // setInterval(function () {
-  //   $('#timer').text((new Date - start) / 1000 + " Seconds");
-  // }, 1000);
-
-
+  }
+  isFirstClick = false //this guy turn false since we already had first click!
 }
 
 
