@@ -187,6 +187,7 @@ const handleClick = function () {
   //if program lock, function end
   if (lock) return false;
 
+  //if user click same card for the second click
   // Ignore if id already selected
   if ($(this).attr("id") === collectId) return false;
   // Set collectId so that you cannot click on it again
