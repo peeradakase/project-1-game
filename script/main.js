@@ -71,7 +71,7 @@ let data = [
   },
   {
     code: "g",
-    link: "./img/Ron2.jpeg",
+    link: "./img/ron3.jpeg",
     id: 14
   },
   {
