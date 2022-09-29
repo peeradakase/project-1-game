@@ -247,15 +247,24 @@ const handleClick = function () {
   //define variable
   //condition: when get first click, do setInterval (we can't use existed variable coz their values always change. we want variable that value change only once after having first click)
   //if second click, then function isn't executed
+  if (isFirstClick) {//this is truthy, so that we don't need === true
+    //
+    setInterval(function () {
+      startSeconds = startSeconds + 1;
+      $('#timer').text(getTimeString(startSeconds));
+    }, 1000);
+    isFirstClick = false //this guy turn false since we already had first click!
 
+  }
+}
 
-  //reset button
-  //refresh whole page
-  //we create another function for reset button coz when user gets bored, she can click anytime
-  const init = () => {
-    generateCards();
-    $grid.on('click', '.card', handleClick)
-    $reset.on('click', () => window.location.reload())
-  };
+//reset button
+//refresh whole page
+//เราจะสร้างปุ่มรีเซต อีกf เพราะuser อยากคลิกเมื่อไหร่ก็ได้
+const init = () => {
+  generateCards();
+  $grid.on('click', '.card', handleClick)
+  $reset.on('click', () => window.location.reload())
+};
 
-  init();
+init();
