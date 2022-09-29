@@ -196,9 +196,11 @@ const handleClick = function () {
   // given the item, select the img and .show()
   // add 1 to count
   $(this).find("img").show();
-  count += 1;
 
   // If odd number
+  // when having first click
+  count += 1;
+
   if (count === 1) {
     clickedFirstBox = $(this).attr("data-code");
   }
@@ -214,7 +216,7 @@ const handleClick = function () {
       lock = true;
       $(".card").find("img").delay(1000).fadeOut(400)
       setTimeout(() => {
-        lock = false;
+        lock = false;// unlock in oder to allow user to play
       }, 1420);
     } else {
       // to remove the both cards which are similar
