@@ -15,7 +15,7 @@ Inspired by the brain exercises game for Alzheimer's patients
 
 ## Production site
 
-Unit 1 Project
+https://peeradakase.github.io/project-1-game/
 
 ## Screenshot
 
