@@ -27,3 +27,7 @@ Playing Screen
 
 Finish Screen
 <img src="./img/screenshots/finish.png">
+
+## Presentation link
+
+https://docs.google.com/presentation/d/16pOB4bgaZRUPTeC2HSvZ71vUQlCtVqmtmlNY5hu3MG8/edit?usp=sharing
